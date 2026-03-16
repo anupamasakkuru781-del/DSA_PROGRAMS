@@ -1,0 +1,41 @@
+# # code for linear probing
+
+# table_size = 7
+# hash_table = [None] * 7
+
+# def hash_function(key):
+#     return key % table_size
+    
+# def insert_linear(key):
+#     index = hash_function(key)
+#     i = 0
+#     while hash_table[(index + i) % table_size] is not None:
+#         i += 1
+#     new_index = (index + i) % table_size
+#     hash_table[new_index] = key
+# keys = [8,15,22]
+# for key in keys:
+#     insert_linear(key)
+# print("Linear Probing Table: ")
+# print(hash_table)
+
+# code for linear probing
+
+table_size = 7
+hash_table = [None] * 7
+
+def hash_function(key):
+    return key % table_size
+    
+def insert_linear(key):
+    index = hash_function(key)
+    i = 0
+    while hash_table[(index + i) % table_size] is not None:
+        i += 1
+    new_index = (index + i) % table_size
+    hash_table[new_index] = key
+keys = [8,15,22]
+for key in keys:
+    insert_linear(key)
+print("Linear Probing Table: ")
+print(hash_table)
