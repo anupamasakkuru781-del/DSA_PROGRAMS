@@ -1,0 +1,81 @@
+# # finding sum of array elements
+
+# def find_sum(arr):
+#     total = 0
+#     for num in arr:
+#         total += num 
+#     return total
+# def main():
+#     arr = [1,2,3,4,5]
+#     print("sum: ",find_sum(arr))
+# main()
+
+# # finding maximum element in an array
+
+# def find_max(arr):
+#     maximum = arr[0]
+#     for num in arr:
+#         if num > maximum:
+#             maximum = num
+#     return maximum
+# def main():
+#     arr = [1,2,3,4,5]
+#     print("max: ", find_max(arr))
+# main()
+
+# # finding maximum element in an array
+
+# def find_max(arr):
+#     maximum = arr[0]
+#     for num in arr:
+#         if num > maximum:
+#             maximum = num
+#     return maximum
+# def main():
+#     arr = [1,22,46,78,92]
+#     print("max: ", find_max(arr))
+# main()
+
+# # find second maximum number        
+
+# def find_sec_max(arr):
+#     first = arr[0]
+#     second = arr[0]
+    
+#     for num in arr:
+#         if num > first:
+#             second = first
+#             first = num
+#         elif num > second and num != first:
+#             second = num
+#     return second
+# def main():
+#     arr = [5,10,3,25,8]
+#     print("second number: ",find_sec_max(arr))
+# main()
+
+# # counting even no.s in array
+
+# def count_even(arr):
+#     count = 0
+#     for num in arr:
+#         if num % 2 == 0:
+#             count += 1 
+#     return count
+# def main():
+#     arr = [2,4,5,7,8,10]
+#     print("even: ", count_even(arr))
+# main()
+
+# counting even no.s in array
+
+def count_even(arr):
+    count = 0
+    for num in arr:
+        if num % 2 == 0:
+            count += 1 
+    return count
+def main():
+    arr = list(map(int, input("enter numbers: ") .split()))
+    print("even: ", count_even(arr))
+main()
