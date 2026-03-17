@@ -1,0 +1,187 @@
+# counting subarray of size k problem
+
+# count how many subarray of size k exists
+
+# eg: arr = [1,2,3,4,5]
+
+# k= 3
+
+# subarray:
+# [1,2,3]
+# [2,3,4]
+# [3,4,5]
+
+# o/p = 3
+
+# eg: arr = [1,2,3,4,5]
+# k=2
+
+# subarray:
+# [1,2]
+# [2,3]
+# [3,4]
+# [4,5]
+
+# def count_subarray(arr, k):
+#     count = 0
+    
+#     for i in range (len(arr)):
+#         if i>=k-1:
+#             count +=1
+#     return count
+# def mIN():
+#     arr = [1,2,3,4,5]
+#     k = 3
+#     print(count_subarray(arr,k))
+# main()
+
+# def count_subarray(arr, k):
+#     count = 0
+    
+#     for i in range(len(arr)):
+#         if i >= k-1:
+#             count += 1
+#     return count
+
+# def main():
+#     arr = [1,2,3,4,5]
+#     k = 3
+#     print("subarray count: ",count_subarray(arr, k))
+
+# main()
+
+# def max_sum(arr, k):
+#     window_sum = 0
+#     max_sum = 0
+    
+#     for i in range(len(arr)):
+#         window_sum += arr[i]
+        
+#         if i >= k - 1:
+#             max_sum = max(max_sum, window_sum)
+#             window_sum -= arr[i - (k - 1)]
+            
+#     return max_sum
+
+
+# def main():
+#     arr = [2,1,5,1,3,2]
+#     k = 3
+#     result = max_sum(arr, k)
+#     print("Maximum sum of subarray of size:", result)
+
+
+# main()
+
+# def max_sum(arr, k):
+#     window_sum = 0
+#     max_sum = 0
+    
+#     for i in range(len(arr)):
+#         window_sum += arr[i]
+        
+#         if i >= k - 1:
+#             max_sum = max(max_sum, window_sum)
+#             window_sum -= arr[i - (k - 1)]
+            
+#     return max_sum
+
+
+# def main():
+#     arr = [2,1,5,1,3,2]
+#     k = 3
+#     result = max_sum(arr, k)
+#     print("Maximum sum of subarray of size:", result)
+
+
+# main()
+
+# sum of subarray of size k 
+# arr = [1,2,3,4,5]
+# k = 3
+# output: [16,9,12]
+
+# def sum_subarray(arr, k):
+#     window_sum = 0
+#     result = []
+    
+#     for i in range(len(arr)):
+#         window_sum += arr[i]
+        
+#         if i >= k - 1:
+#             result.append(window_sum)
+#             window_sum -= arr[i - (k - 1)]
+            
+#     return result
+# def main():
+#     arr = [1,2,3,4,5]
+#     k = 3
+#     print("Result of subarray: ", sum_subarray(arr,k))
+# main()
+
+# finding average of all the subarray of size k 
+# arr = [1,2,3,4,5]
+# k = 3
+# o/p = [2,3,4]
+
+# def average_subarray(arr, k):
+#     window_sum = 0
+#     result = []
+    
+#     for i in range(len(arr)):
+#         window_sum += arr[i]
+        
+#         if i >= k - 1:
+#             average = window_sum / k
+#             result.append(average)
+#             window_sum -= arr[i - (k - 1)]
+            
+#     return result
+
+# def main():
+#     arr = [1,2,3,4,5]
+#     k = 3
+#     print("Average of subarray: ", average_subarray(arr,k))
+# main()
+
+# finding maximum of all the subarray of size k
+# arr = [1,2,3,4,5]     
+# k = 3
+# o/p = [3,4,5]
+
+# def max_subarray(arr, k):
+#     result = []
+    
+#     for i in range(len(arr)):
+#         if i >= k - 1:
+#             max_value = max(arr[i - (k - 1):i + 1])
+#             result.append(max_value)
+            
+#     return result
+
+# def main():
+#     arr = [1,2,3,4,5]
+#     k = 3
+#     print("Maximum of subarray: ", max_subarray(arr,k))
+# main()
+
+# finding minimum of all the subarray of size k
+# arr = [1,2,3,4,5]
+# k = 3
+
+def min_subarray(arr,k):
+    result = []
+
+    for i in range(len(arr)):
+        if i >= k - 1:
+            min_value = min(arr[i - (k - 1):i + 1])
+            result.append(min_value)    
+
+    return result
+
+def main():
+    arr = [1,2,3,4,5]
+    k = 3
+    print("Minimum of subarray: ", min_subarray(arr,k))
+main()
+
